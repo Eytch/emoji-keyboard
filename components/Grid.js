@@ -4,21 +4,21 @@ import { Slide, Zoom, Flip, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Grid(props) {
-  const filteredEmojis = props.data.filter(
-    (emo) =>
-      !emo.unicodeName.startsWith('E0') &&
-      !emo.unicodeName.startsWith('E1') &&
-      !emo.unicodeName.startsWith('E2') &&
-      !emo.unicodeName.startsWith('E3') &&
-      !emo.unicodeName.startsWith('E4') &&
-      !emo.unicodeName.startsWith('E5') &&
-      !emo.unicodeName.startsWith('E6') &&
-      !emo.unicodeName.startsWith('E7') &&
-      !emo.unicodeName.startsWith('E8') &&
-      !emo.unicodeName.startsWith('E9')
-  );
+  // const filteredEmojis = props.data.filter(
+  //   (emo) =>
+  //     !emo.unicodeName.startsWith('E0') &&
+  //     !emo.unicodeName.startsWith('E1') &&
+  //     !emo.unicodeName.startsWith('E2') &&
+  //     !emo.unicodeName.startsWith('E3') &&
+  //     !emo.unicodeName.startsWith('E4') &&
+  //     !emo.unicodeName.startsWith('E5') &&
+  //     !emo.unicodeName.startsWith('E6') &&
+  //     !emo.unicodeName.startsWith('E7') &&
+  //     !emo.unicodeName.startsWith('E8') &&
+  //     !emo.unicodeName.startsWith('E9')
+  // );
 
-  const elements = filteredEmojis.map((emoji) => (
+  const elements = props.data.map((emoji) => (
     <div
       key={emoji.unicodeName}
       className='p-4 cursor-pointer flex justify-center items-center text-base bg-midnight border border-secondary hover:border-main w-12 h-12 rounded-md transition-all ease-in-out md:text-2xl'
